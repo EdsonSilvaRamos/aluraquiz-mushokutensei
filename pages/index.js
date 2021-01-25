@@ -5,6 +5,7 @@ import Widget from "../src/components/Widget";
 import QuizBackground from "../src/components/QuizBackground";
 import GitHubCorner from "../src/components/GitHubCorner";
 import Footer from "../src/components/Footer";
+import Head from "../src/components/Head";
 
 export const QuizContainer = styled.div`
   width: 100%;
@@ -20,8 +21,9 @@ export const QuizContainer = styled.div`
 export default function Home() {
   return (
     <QuizBackground backgroundImage={db.bg}>
+      <Head />
       <QuizContainer>
-        <QuizLogo/>    
+        <QuizLogo />
         <Widget>
           <Widget.Header>
             <h1>Alura Quiz Mushoku Tensei</h1>
@@ -41,7 +43,7 @@ export default function Home() {
 
         <Footer />
       </QuizContainer>
-      <GitHubCorner projectUrl="https://github.com/EdsonSilvaRamos"/>
+      <GitHubCorner projectUrl="https://github.com/EdsonSilvaRamos" />
     </QuizBackground>
   );
 }
